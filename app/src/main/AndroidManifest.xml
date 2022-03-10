@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.converttemperature">
+    package="com.example.converttemperature" >
 
     <application
         android:allowBackup="true"
@@ -9,12 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConvertTemperature" >
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity
+            android:name=".ui.activity.HistoryActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.activity.FormCelsiusActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.activity.HistoryActivity">
+        </activity>
+        <activity
+            android:name=".ui.activity.FormFahrenheitActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.activity.HistoryActivity">
+        </activity>
     </application>
-
 </manifest>
